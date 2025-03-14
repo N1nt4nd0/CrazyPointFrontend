@@ -1,14 +1,8 @@
-import React from "react";
-import {Helmet} from "react-helmet-async";
 import {Link} from "react-router-dom";
+import React from "react";
 
-const About = () => {
-    return (<>
-        <Helmet>
-            <meta name="viewport" content="width=device-width, initial-scale=0.9"/>
-            <title>Crazy Point - About</title>
-        </Helmet>
-
+const AboutCard = () => {
+    return (
         <div className="card">
             <h1>Author contacts</h1>
             <p>feodor.kekovich@gmail.com</p>
@@ -36,7 +30,7 @@ const About = () => {
                 </Link>
             </nav>
         </div>
-    </>);
-};
+    );
+}
 
-export default About;
+export default AboutCard;

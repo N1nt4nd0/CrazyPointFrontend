@@ -12,6 +12,7 @@ body, html {
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    text-align: center;
     font-family: 'Press Start 2P', cursive;
     font-size: 14px;
     color: #00ffcc;
@@ -41,10 +42,6 @@ body, html {
     border: 4px solid #ff0077;
     box-shadow: 0 0 15px #ff0077;
     animation: borderGradient 10s linear infinite;
-}
-
-#avatar {
-    transition: opacity 0.5s ease-in-out;
 }
 
 .card h1 {
@@ -122,8 +119,8 @@ th {
 }
 
 .days-container {
-    margin: 15px;
     text-align: center;
+    margin: 15px;
     padding: 10px 50px;
     border: 3px #00ffcc solid;
     border-radius: 15px;

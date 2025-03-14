@@ -1,14 +1,8 @@
-import React from "react";
-import {Helmet} from "react-helmet-async";
 import {Link} from "react-router-dom";
+import React from "react";
 
-const Donate = () => {
-    return (<>
-        <Helmet>
-            <meta name="viewport" content="width=device-width, initial-scale=0.9"/>
-            <title>Crazy Point - Donate</title>
-        </Helmet>
-
+const DonateCard = () => {
+    return (
         <div className="card">
             <h1>BelarusBank card</h1>
             <p>9112380175032152</p>
@@ -44,7 +38,7 @@ const Donate = () => {
                 </Link>
             </nav>
         </div>
-    </>);
-};
+    );
+}
 
-export default Donate;
+export default DonateCard;
