@@ -1,0 +1,212 @@
+@font-face {
+    font-family: 'Press Start 2P';
+    src: url('../public/fonts/PressStart2P-Regular.woff2') format('woff2');
+    font-display: block;
+}
+
+body, html {
+    height: 100%;
+    margin: 0;
+    padding: 15px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Press Start 2P', cursive;
+    font-size: 14px;
+    color: #00ffcc;
+    background: linear-gradient(135deg, #0f0c29, #302b63, #24243e) fixed;
+    white-space: nowrap;
+}
+
+.card {
+    width: 360px;
+    margin: 15px;
+    padding-block: 20px;
+    padding-inline: 10px;
+    text-align: center;
+    border: 4px solid transparent;
+    border-radius: 15px;
+    background-color: black;
+    box-shadow: 0 0 20px #00ffcc, 0 0 40px #ff0077;
+    animation: borderGradient 5s linear infinite;
+}
+
+.card-avatar {
+    margin-bottom: 20px;
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 4px solid #ff0077;
+    box-shadow: 0 0 15px #ff0077;
+    animation: borderGradient 10s linear infinite;
+}
+
+#avatar {
+    transition: opacity 0.5s ease-in-out;
+}
+
+.card h1 {
+    font-size: 1.1rem;
+    color: #ff0077;
+    text-shadow: 0 0 5px #ff0077, 0 0 10px #00ffcc;
+}
+
+.card p {
+    color: #00ffcc;
+    font-size: 0.6rem;
+    text-shadow: 0 0 5px #00ffcc;
+}
+
+.bauble-links {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+    margin-top: 20px;
+}
+
+.bauble-links a {
+    border-radius: 50%;
+    width: 48px;
+    height: 48px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #ff0077;
+    transition: transform 0.5s, box-shadow 0.5s;
+}
+
+.bauble-links a img {
+    border-radius: 50%;
+    object-fit: cover;
+    width: 40px;
+    height: 40px;
+}
+
+.bauble-links a:hover {
+    transform: scale(1.2);
+    box-shadow: 0 0 20px #ff0077, 0 0 40px #00ffcc;
+}
+
+.bauble-links a[href="/donate"] {
+    animation: pulse 2s infinite;
+    margin-bottom: 10px;
+}
+
+.card-link {
+    display: block;
+    text-decoration: none;
+    font-size: 0.9rem;
+    color: #ff0077;
+    text-shadow: 0 0 5px #ff0077, 0 0 10px #00ffcc;
+    margin-top: 15px;
+}
+
+table {
+    border-collapse: collapse;
+    border: 2px solid #00ffcc;
+    background-color: #0f0c29;
+    text-align: center;
+}
+
+th, td {
+    padding: 10px;
+    border: 1px solid #00ffcc;
+}
+
+th {
+    background-color: #00ffcc;
+    color: black;
+}
+
+.days-container {
+    margin: 15px;
+    text-align: center;
+    padding: 10px 50px;
+    border: 3px #00ffcc solid;
+    border-radius: 15px;
+}
+
+.chart-container {
+    margin: 20px;
+    padding: 10px;
+    border: 3px #00ffcc solid;
+    border-radius: 15px;
+    height: 300px;
+    max-width: 700px;
+    width: 100%;
+}
+
+.cyber-button {
+    display: inline-block;
+    text-align: center;
+    text-decoration: none;
+    margin: 10px;
+    padding: 15px 25px;
+    border-radius: 10px;
+    background-color: #ff0077;
+    text-shadow: 0 0 6px black;
+    color: #00ffcc;
+    font-family: 'Press Start 2P', cursive;
+    font-size: 1rem;
+    transition: background-color 0.3s ease;
+    cursor: pointer;
+}
+
+.cyber-button:hover {
+    background-color: transparent;
+}
+
+.back-button {
+    margin-top: 30px;
+}
+
+.streaming-indicator {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    display: inline-block;
+}
+
+.online {
+    background-color: lime;
+}
+
+.offline {
+    background-color: slategray;
+}
+
+@keyframes pulse {
+    0% {
+        transform: scale(1);
+        box-shadow: 0 0 10px #00ffcc, 0 0 20px #ff0077;
+    }
+    50% {
+        transform: scale(1.2);
+        box-shadow: 0 0 20px #ff0077, 0 0 40px #00ffcc;
+    }
+    100% {
+        transform: scale(1);
+        box-shadow: 0 0 10px #00ffcc, 0 0 20px #ff0077;
+    }
+}
+
+@keyframes borderGradient {
+    0% {
+        border-color: #ff0077;
+    }
+    25% {
+        border-color: #00ffcc;
+    }
+    50% {
+        border-color: #ff0077;
+    }
+    75% {
+        border-color: #00ffcc;
+    }
+    100% {
+        border-color: #ff0077;
+    }
+}
