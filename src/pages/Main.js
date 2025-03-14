@@ -38,7 +38,7 @@ const Main = () => {
     return (<>
         <Helmet>
             <meta name="viewport" content="width=device-width, initial-scale=0.9"/>
-            <title>CrazyPoint</title>
+            <title>Crazy Point</title>
         </Helmet>
 
         <div className="card">

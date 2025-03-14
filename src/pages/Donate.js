@@ -6,7 +6,7 @@ const Donate = () => {
     return (<>
         <Helmet>
             <meta name="viewport" content="width=device-width, initial-scale=0.9"/>
-            <title>CrazyPoint - Donate</title>
+            <title>Crazy Point - Donate</title>
         </Helmet>
 
         <div className="card">

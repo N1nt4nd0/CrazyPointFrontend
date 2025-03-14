@@ -6,7 +6,7 @@ const About = () => {
     return (<>
         <Helmet>
             <meta name="viewport" content="width=device-width, initial-scale=0.9"/>
-            <title>CrazyPoint - About</title>
+            <title>Crazy Point - About</title>
         </Helmet>
 
         <div className="card">
