@@ -13,7 +13,8 @@ const BigoStreamDaysPage = () => {
             return;
         }
         try {
-            const response = await fetch(process.env.REACT_APP_STREAM_DAYS_API + "?siteId=" + siteId);
+            let fetchUrl = process.env.REACT_APP_STREAM_DAYS_API + "?siteId=" + siteId;
+            const response = await fetch(fetchUrl);
             if (!response.ok) {
                 return;
             }
@@ -35,7 +36,7 @@ const BigoStreamDaysPage = () => {
             <title>Графики стримов {bigoUserName}</title>
         </Helmet>
         <h2>Графики стримов '{bigoUserName}'</h2>
-        <div className={streamDays.length === 0 ? '' : 'days-container'}>
+        <div className={streamDays.length > 0 ? "days-container" : ""}>
             {streamDays.map((day, index) => (
                 <div key={index}>
                     <Link className="cyber-button" to={"/bigo_stream_chart_daily/" + siteId + "/" + day}>{day}</Link>

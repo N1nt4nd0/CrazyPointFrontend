@@ -2,7 +2,7 @@ import React, {useEffect, useState} from "react";
 import {Helmet} from "react-helmet-async";
 import MainCard from "../components/MainCard";
 
-const Main = () => {
+const MainPage = () => {
     const [avatarIndex, setAvatarIndex] = useState(0);
     const [avatarUrls, setAvatarUrls] = useState([]);
 
@@ -30,7 +30,8 @@ const Main = () => {
 
     const fetchAvatars = async () => {
         try {
-            const response = await fetch(process.env.REACT_APP_AVATARS_LIST_API);
+            let fetchUrl = process.env.REACT_APP_AVATARS_LIST_API;
+            const response = await fetch(fetchUrl);
             if (!response.ok) {
                 return;
             }
@@ -52,4 +53,4 @@ const Main = () => {
     </>);
 }
 
-export default Main;
+export default MainPage;

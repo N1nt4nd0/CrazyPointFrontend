@@ -2,6 +2,7 @@ import React, {useEffect, useState} from "react";
 import {Helmet} from "react-helmet-async";
 import {useParams} from "react-router-dom";
 import BackButton from "../components/BackButton";
+import StreamChartDaily from "../components/StreamChartDaily";
 
 const BigoStreamChartDailyPage = () => {
     const [totalDailyTime, setTotalDailyTime] = useState("");
@@ -14,7 +15,8 @@ const BigoStreamChartDailyPage = () => {
             return;
         }
         try {
-            const response = await fetch(process.env.REACT_APP_STREAM_CHART_DAILY_API + "?siteId=" + siteId + "&day=" + day);
+            const fetchUrl = process.env.REACT_APP_STREAM_CHART_DAILY_API + "?siteId=" + siteId + "&day=" + day;
+            const response = await fetch(fetchUrl);
             if (!response.ok) {
                 return;
             }
@@ -37,8 +39,10 @@ const BigoStreamChartDailyPage = () => {
             <title>Активность {bigoUserName}</title>
         </Helmet>
         <h2>Стримы '{bigoUserName}' за '{day}'</h2>
-        <p>{totalDailyTime}</p>
-        <p>${JSON.stringify(chartData)}</p>
+        <div className="chart-container">
+            <StreamChartDaily chartData={chartData}/>
+        </div>
+        <p>Всего за день - {totalDailyTime}</p>
         <BackButton/>
     </>);
 }

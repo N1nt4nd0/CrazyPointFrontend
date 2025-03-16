@@ -9,7 +9,8 @@ const BigoStreamersPage = () => {
 
     const fetchStreamers = async () => {
         try {
-            const response = await fetch(process.env.REACT_APP_STREAMERS_LIST_API);
+            let fetchUrl = process.env.REACT_APP_STREAMERS_LIST_API;
+            const response = await fetch(fetchUrl);
             if (!response.ok) {
                 return;
             }
@@ -55,7 +56,7 @@ const BigoStreamersPage = () => {
                                rel="noopener noreferrer">Перейти</a>
                         </td>
                         <td>
-                            <Link className="cyber-button" to={`/bigo_stream_days/${user.siteId}`}>Смотреть</Link>
+                            <Link className="cyber-button" to={"/bigo_stream_days/" + user.siteId}>Смотреть</Link>
                         </td>
                     </tr>
                 ))}

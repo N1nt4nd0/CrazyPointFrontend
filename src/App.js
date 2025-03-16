@@ -8,8 +8,6 @@ import DonatePage from "./pages/DonatePage";
 import AboutPage from "./pages/AboutPage";
 import MainPage from "./pages/MainPage";
 
-// TODO Make ChartDaily template component with needed fills
-
 function App() {
     return (
         <HelmetProvider>
