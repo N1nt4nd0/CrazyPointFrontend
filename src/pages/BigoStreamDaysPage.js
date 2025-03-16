@@ -35,9 +35,9 @@ const BigoStreamDaysPage = () => {
             <title>Графики стримов {bigoUserName}</title>
         </Helmet>
         <h2>Графики стримов '{bigoUserName}'</h2>
-        <div className={streamDays.length === 0 ? '' : 'days-container'}> {/* TODO width expanding by <h2> title*/}
+        <div className={streamDays.length === 0 ? '' : 'days-container'}>
             {streamDays.map((day, index) => (
-                <div key={index}> {/* TODO make rotes smarter*/}
+                <div key={index}>
                     <Link className="cyber-button" to={"/bigo_stream_chart_daily/" + siteId + "/" + day}>{day}</Link>
                 </div>
             ))}

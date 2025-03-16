@@ -31,8 +31,8 @@ const BigoStreamersPage = () => {
         <Helmet>
             <title>Таблица стримеров BigoLive</title>
         </Helmet>
-        <div>
-            <h2>Таблица стримеров BigoLive</h2>
+        <h2>Таблица стримеров BigoLive</h2>
+        <div className="table-container">
             <table>
                 <thead>
                 <tr>
@@ -61,9 +61,9 @@ const BigoStreamersPage = () => {
                 ))}
                 </tbody>
             </table>
-            <p>Всего стримеров: {totalStreamers}</p>
-            <BackButton/>
         </div>
+        <p>Всего стримеров: {totalStreamers}</p>
+        <BackButton/>
     </>);
 };
 
