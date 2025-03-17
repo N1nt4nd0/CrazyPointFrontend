@@ -7,22 +7,26 @@ const AboutCard = () => {
             <h1>Author contacts</h1>
             <p>feodor.kekovich@gmail.com</p>
 
-            <h1>Technology Stack</h1>
+            <h1>Backend stack</h1>
             <p>Spring [Web, Security]</p>
             <p>Java 17</p>
             <p>Gradle</p>
-            <p>Hibernate</p>
             <p>Mongo DB</p>
             <p>Redis</p>
-            <p>Thymeleaf</p>
+            <p>RabbitMQ</p>
             <p>Swagger</p>
             <p>Telegram bots</p>
+            <p>Docker</p>
+
+            <h1>Frontend stack</h1>
+            <p>Node.js</p>
+            <p>React</p>
+            <p>Docker</p>
 
             <h1>Cloud solutions</h1>
-            <p>GitHub [Code Base]</p>
-            <p>Spaceship [Domain]</p>
-            <p>Upstash [Redis, QStash]</p>
-            <p>Heroku [Deploying Platform]</p>
+            <p>GitHub [VCS, Actions]</p>
+            <p>Railway (Deploy)</p>
+            <p>Spaceship (Domain)</p>
 
             <nav className="bauble-links">
                 <Link to="/" title="Home">
