@@ -221,11 +221,10 @@ th {
     }
 }
 
-/* Scrollbar options */
+/* Scrolling content options */
 
 .days-container, .table-container {
     display: inline-block;
-    flex-grow: 1;
     max-height: 60vh;
     overflow-y: auto;
 }
