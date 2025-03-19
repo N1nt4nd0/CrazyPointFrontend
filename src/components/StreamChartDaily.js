@@ -121,6 +121,6 @@ const StreamChartDaily = ({chartData}) => {
     }, [chartData]);
 
     return <canvas ref={chartRef}/>;
-};
+}
 
 export default StreamChartDaily;

@@ -2,10 +2,12 @@ import React, {useEffect, useState} from "react";
 import {Helmet} from "react-helmet-async";
 import {Link, useParams} from "react-router-dom";
 import BackButton from "../components/BackButton";
+import Spinner from "../components/Spinner";
 
 const BigoStreamDaysPage = () => {
     const [bigoUserName, setBigoUserName] = useState("");
     const [streamDays, setStreamDays] = useState([]);
+    const [isLoading, setIsLoading] = useState(true);
     const {siteId} = useParams();
 
     const fetchStreamDays = async (siteId) => {
@@ -23,6 +25,8 @@ const BigoStreamDaysPage = () => {
             setStreamDays(data.streamDays);
         } catch (error) {
             console.error("Error loading stream days:", error);
+        } finally {
+            setIsLoading(false);
         }
     }
 
@@ -35,15 +39,20 @@ const BigoStreamDaysPage = () => {
             <meta name="viewport" content="width=device-width, initial-scale=0.5"/>
             <title>Графики стримов {bigoUserName}</title>
         </Helmet>
-        <h2>Графики стримов '{bigoUserName}'</h2>
-        <div className={streamDays.length > 0 ? "days-container" : ""}>
-            {streamDays.map((day, index) => (
-                <div key={index}>
-                    <Link className="cyber-button" to={"/bigo_stream_chart_daily/" + siteId + "/" + day}>{day}</Link>
-                </div>
-            ))}
-        </div>
-        <BackButton/>
+        {isLoading ? (
+            <Spinner/>
+        ) : (<>
+            <h2>Графики стримов '{bigoUserName}'</h2>
+            <div className={streamDays.length > 0 ? "days-container" : ""}>
+                {streamDays.map((day, index) => (
+                    <div key={index}>
+                        <Link className="cyber-button"
+                              to={"/bigo_stream_chart_daily/" + siteId + "/" + day}>{day}</Link>
+                    </div>
+                ))}
+            </div>
+            <BackButton/>
+        </>)}
     </>);
 }
 
