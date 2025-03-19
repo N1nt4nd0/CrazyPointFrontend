@@ -30,7 +30,7 @@ const BigoStreamersPage = () => {
 
     return (<>
         <Helmet>
-            <meta name="viewport" content="width=device-width, initial-scale=0.5"/>
+            <meta name="viewport" content="width=device-width, initial-scale=0.35"/>
             <title>Таблица стримеров BigoLive</title>
         </Helmet>
         <h2>Таблица стримеров BigoLive</h2>

@@ -21,11 +21,12 @@ const AboutCard = () => {
             <h1>Frontend stack</h1>
             <p>Node.js</p>
             <p>React</p>
-            <p>Docker</p>
 
             <h1>Cloud solutions</h1>
-            <p>GitHub [VCS, Actions]</p>
-            <p>Railway (Deploy)</p>
+            <p>GitHub (VCS, Pipeline)</p>
+            <p>Koyeb, Render (Deploy)</p>
+            <p>Upstash (Redis, CRON jobs)</p>
+            <p>Cloudampq (RabbitMQ)</p>
             <p>Spaceship (Domain)</p>
 
             <nav className="bauble-links">
