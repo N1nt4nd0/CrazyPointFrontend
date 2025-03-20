@@ -1,10 +1,9 @@
 import React from "react";
-import BackButton from "../components/BackButton";
 import {Link} from "react-router-dom";
 import DataPage from "./DataPage";
 
 const BigoStreamersPage = () => {
-    return (<>
+    return (
         <DataPage
             title={"Таблица стримеров BigoLive"}
             deviceScale={0.4}
@@ -43,8 +42,7 @@ const BigoStreamersPage = () => {
                 <p>Всего стримеров: {data.bigoUsersTotal}</p>
             </>)}
         />
-        <BackButton/>
-    </>);
+    );
 }
 
 export default BigoStreamersPage;

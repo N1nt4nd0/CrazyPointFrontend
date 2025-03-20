@@ -1,11 +1,10 @@
 import React from "react";
 import {Link, useParams} from "react-router-dom";
-import BackButton from "../components/BackButton";
 import DataPage from "./DataPage";
 
 const BigoStreamDaysPage = () => {
     const {siteId} = useParams();
-    return (<>
+    return (
         <DataPage
             title={"Дни стримов"}
             deviceScale={0.7}
@@ -24,8 +23,7 @@ const BigoStreamDaysPage = () => {
                 </div>
             </>)}
         />
-        <BackButton/>
-    </>);
+    );
 }
 
 export default BigoStreamDaysPage;

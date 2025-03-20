@@ -1,12 +1,11 @@
 import React from "react";
 import {useParams} from "react-router-dom";
-import BackButton from "../components/BackButton";
 import StreamChartDaily from "../components/StreamChartDaily";
 import DataPage from "./DataPage";
 
 const BigoStreamChartDailyPage = () => {
     const {siteId, day} = useParams();
-    return (<>
+    return (
         <DataPage
             title={"График стримов"}
             deviceScale={0.5}
@@ -19,8 +18,7 @@ const BigoStreamChartDailyPage = () => {
                 <p>Всего за день - {data.totalDailyTime}</p>
             </>)}
         />
-        <BackButton/>
-    </>);
+    );
 }
 
 export default BigoStreamChartDailyPage;
