@@ -1,26 +1,7 @@
 import React, {useEffect, useRef} from 'react';
-import {
-    CategoryScale,
-    Chart,
-    Legend,
-    LinearScale,
-    LineController,
-    LineElement,
-    PointElement,
-    Title,
-    Tooltip
-} from 'chart.js';
+import {Chart, registerables} from 'chart.js';
 
-Chart.register(
-    CategoryScale,
-    LinearScale,
-    LineElement,
-    PointElement,
-    Title,
-    Tooltip,
-    Legend,
-    LineController
-);
+Chart.register(...registerables);
 
 const StreamChartDaily = ({chartData}) => {
     const chartInstance = useRef(null);

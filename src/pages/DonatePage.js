@@ -1,13 +1,10 @@
 import React from "react";
-import {Helmet} from "react-helmet-async";
 import DonateCard from "../components/DonateCard";
+import Root from "../components/Root";
 
 const DonatePage = () => {
     return (<>
-        <Helmet>
-            <meta name="viewport" content="width=device-width, initial-scale=0.9"/>
-            <title>Crazy Point - Donate</title>
-        </Helmet>
+        <Root title={"Donate"} deviceScale={0.9}/>
         <DonateCard/>
     </>);
 }
