@@ -26,7 +26,10 @@ const DonateCard = () => {
             <p>IBAN:</p>
             <p>PL02102011270000180203850088</p>
 
-            <h1>YooMoney wallet</h1>
+                <h1>YooMoney</h1>
+                <p>CARD NUMBER:</p>
+                <p>2204120200046254</p>
+                <p>WALLET:</p>
             <p>4100117004369583</p>
 
             <h1>USDT (TRC20)</h1>
