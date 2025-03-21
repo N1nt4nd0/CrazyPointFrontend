@@ -1,6 +1,5 @@
 import React from "react";
-import {HelmetProvider} from "react-helmet-async";
-import {BrowserRouter as Router, Route, Routes} from "react-router-dom";
+import {BrowserRouter as Router, Route, Switch} from "react-router-dom";
 import BigoStreamChartDailyPage from "./pages/BigoStreamChartDailyPage";
 import BigoStreamDaysPage from "./pages/BigoStreamDaysPage";
 import BigoStreamersPage from "./pages/BigoStreamersPage";
@@ -10,18 +9,16 @@ import MainPage from "./pages/MainPage";
 
 function App() {
     return (
-        <HelmetProvider>
-            <Router>
-                <Routes>
-                    <Route path="/" element={<MainPage/>}/>
-                    <Route path="/about" element={<AboutPage/>}/>
-                    <Route path="/donate" element={<DonatePage/>}/>
-                    <Route path="/bigo_streamers" element={<BigoStreamersPage/>}/>
-                    <Route path="/bigo_stream_days/:siteId" element={<BigoStreamDaysPage/>}/>
-                    <Route path="/bigo_stream_chart_daily/:siteId/:day" element={<BigoStreamChartDailyPage/>}/>
-                </Routes>
-            </Router>
-        </HelmetProvider>
+        <Router>
+            <Switch>
+                <Route exact path="/" component={MainPage}/>
+                <Route path="/about" component={AboutPage}/>
+                <Route path="/donate" component={DonatePage}/>
+                <Route path="/bigo_streamers" component={BigoStreamersPage}/>
+                <Route path="/bigo_stream_days/:siteId" component={BigoStreamDaysPage}/>
+                <Route path="/bigo_stream_chart_daily/:siteId/:day" component={BigoStreamChartDailyPage}/>
+            </Switch>
+        </Router>
     );
 }
 
