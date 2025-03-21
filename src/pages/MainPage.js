@@ -10,7 +10,7 @@ const MainPage = () => {
 
     useEffect(() => {
         if (avatarUrls.length === 0) {
-            return
+            return;
         }
 
         const avatar = document.getElementById("avatar");
@@ -22,7 +22,7 @@ const MainPage = () => {
             avatar.src = avatarUrls[avatarIndex];
             avatar.onload = () => {
                 avatar.style.opacity = "1";
-            };
+            }
             setAvatarIndex(prevIndex => (prevIndex + 1) % avatarUrls.length);
         }
 

@@ -17,7 +17,8 @@ const useFetchData = (fetchUrl, updateInterval = 0) => {
             setData(data);
             setError(null);
         } catch (error) {
-            setError(error.message);
+            setError("Failed to fetch");
+            console.error(error);
         } finally {
             setIsFirstLoading(false);
         }
