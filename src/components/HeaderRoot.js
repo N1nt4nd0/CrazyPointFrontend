@@ -1,7 +1,7 @@
 import React from "react";
 import {Helmet} from "react-helmet-async";
 
-const Root = ({title, deviceScale = 1}) => {
+const HeaderRoot = ({title, deviceScale = 1}) => {
     return (<>
         <Helmet>
             <meta name="viewport" content={`width=device-width, initial-scale=${deviceScale}`}/>
@@ -10,4 +10,4 @@ const Root = ({title, deviceScale = 1}) => {
     </>);
 }
 
-export default Root;
+export default HeaderRoot;

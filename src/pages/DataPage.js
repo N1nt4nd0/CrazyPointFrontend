@@ -1,20 +1,20 @@
 import React from "react";
-import Spinner from "../components/Spinner";
+import SpinnerPage from "./SpinnerPage";
 import ErrorPage from "./ErrorPage";
 import useFetchData from "../hooks/useFetchData";
-import Root from "../components/Root";
+import HeaderRoot from "../components/HeaderRoot";
 import BackButton from "../components/BackButton";
 
 const DataPage = ({title, deviceScale = 1, updatesUrl, updateInterval = 0, renderContent}) => {
     const {data, isFirstLoading, error} = useFetchData(updatesUrl, updateInterval);
     if (isFirstLoading) {
-        return <Spinner/>;
+        return <SpinnerPage title={title}/>;
     }
     if (error) {
         return <ErrorPage error={error}/>;
     }
     return (<>
-        <Root title={title} deviceScale={deviceScale}/>
+        <HeaderRoot title={title} deviceScale={deviceScale}/>
         {renderContent(data)}
         <BackButton/>
     </>);

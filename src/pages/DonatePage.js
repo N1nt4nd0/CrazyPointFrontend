@@ -1,10 +1,10 @@
 import React from "react";
 import DonateCard from "../components/DonateCard";
-import Root from "../components/Root";
+import HeaderRoot from "../components/HeaderRoot";
 
 const DonatePage = () => {
     return (<>
-        <Root title={"Donate"} deviceScale={0.9}/>
+        <HeaderRoot title={"Donate"} deviceScale={0.9}/>
         <DonateCard/>
     </>);
 }

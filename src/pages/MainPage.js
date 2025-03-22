@@ -1,7 +1,7 @@
 import React, {useEffect, useState} from "react";
 import MainCard from "../components/MainCard";
 import useFetchData from "../hooks/useFetchData";
-import Root from "../components/Root";
+import HeaderRoot from "../components/HeaderRoot";
 
 const MainPage = () => {
     const [avatarIndex, setAvatarIndex] = useState(0);
@@ -31,7 +31,7 @@ const MainPage = () => {
     }, [avatarUrls, avatarIndex]);
 
     return (<>
-        <Root title={"Crazy Point"} deviceScale={0.9}/>
+        <HeaderRoot title={"Crazy Point"} deviceScale={0.9}/>
         <MainCard/>
     </>);
 }

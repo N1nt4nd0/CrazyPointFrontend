@@ -1,10 +1,10 @@
 import React from "react";
 import AboutCard from "../components/AboutCard";
-import Root from "../components/Root";
+import HeaderRoot from "../components/HeaderRoot";
 
 const AboutPage = () => {
     return (<>
-        <Root title={"About"} deviceScale={0.9}/>
+        <HeaderRoot title={"About"} deviceScale={0.9}/>
         <AboutCard/>
     </>);
 }
