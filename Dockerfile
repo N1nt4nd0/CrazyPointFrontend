@@ -16,4 +16,4 @@ ENV REACT_APP_STREAMERS_LIST_API=$STREAMERS_LIST_API
 
 RUN npm run build
 
-CMD ["serve", "-s", "build"]
+CMD ["npx", "serve", "-s", "build"]
