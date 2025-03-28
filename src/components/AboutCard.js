@@ -10,6 +10,7 @@ const AboutCard = () => {
             <h1>Frontend</h1>
             <p>Node.js</p>
             <p>React</p>
+            <p>Docker</p>
 
             <h1>Backend</h1>
             <p>Spring [Web, Security]</p>
