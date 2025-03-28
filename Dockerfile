@@ -15,4 +15,5 @@ ENV REACT_APP_STREAM_DAYS_API=$STREAM_DAYS_API
 ENV REACT_APP_STREAMERS_LIST_API=$STREAMERS_LIST_API
 
 RUN npm run build
-RUN serve -s build
+
+CMD ["serve", "-s", "build"]
