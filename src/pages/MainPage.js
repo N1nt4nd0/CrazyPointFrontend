@@ -5,7 +5,7 @@ import HeaderRoot from "../components/HeaderRoot";
 
 const MainPage = () => {
     const [avatarIndex, setAvatarIndex] = useState(0);
-    const {data} = useFetchData(process.env.REACT_APP_AVATARS_LIST_API);
+    const {data} = useFetchData("https://dull-sibley-feodordev-f818da62.koyeb.app/api/public/avatar/list");
     const avatarUrls = data?.avatars?.map(avatar => avatar.avatarUrl) || [];
 
     useEffect(() => {
