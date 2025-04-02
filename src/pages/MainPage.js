@@ -2,10 +2,11 @@ import React, {useEffect, useState} from "react";
 import MainCard from "../components/MainCard";
 import useFetchData from "../hooks/useFetchData";
 import HeaderRoot from "../components/HeaderRoot";
+import {AVATARS_LIST_API} from "../Env";
 
 const MainPage = () => {
     const [avatarIndex, setAvatarIndex] = useState(0);
-    const {data} = useFetchData(process.env.REACT_APP_AVATARS_LIST_API);
+    const {data} = useFetchData(AVATARS_LIST_API);
     const avatarUrls = data?.avatars?.map(avatar => avatar.avatarUrl) || [];
 
     useEffect(() => {

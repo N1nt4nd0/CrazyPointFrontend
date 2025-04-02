@@ -1,13 +1,14 @@
 import React from "react";
 import {Link} from "react-router-dom";
 import DataPage from "./DataPage";
+import {STREAMERS_LIST_API} from "../Env";
 
 const BigoStreamersPage = () => {
     return (
         <DataPage
             title={"Таблица стримеров BigoLive"}
             deviceScale={0.4}
-            updatesUrl={process.env.REACT_APP_STREAMERS_LIST_API}
+            updatesUrl={STREAMERS_LIST_API}
             updateInterval={5000}
             renderContent={(data) => (<>
                 <h2>Таблица стримеров BigoLive</h2>

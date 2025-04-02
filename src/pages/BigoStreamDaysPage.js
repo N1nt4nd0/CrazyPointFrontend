@@ -1,6 +1,7 @@
 import React from "react";
 import {Link, useParams} from "react-router-dom";
 import DataPage from "./DataPage";
+import {STREAM_DAYS_API} from "../Env";
 
 const BigoStreamDaysPage = () => {
     const {siteId} = useParams();
@@ -8,7 +9,7 @@ const BigoStreamDaysPage = () => {
         <DataPage
             title={"Дни стримов"}
             deviceScale={0.7}
-            updatesUrl={process.env.REACT_APP_STREAM_DAYS_API + "?siteId=" + siteId}
+            updatesUrl={STREAM_DAYS_API + "?siteId=" + siteId}
             renderContent={(data) => (<>
                 <h3>Стримы '{data.bigoUserName}'</h3>
                 <div className={data.streamDays.length > 0 ? "days-container" : ""}>
